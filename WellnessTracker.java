@@ -6,7 +6,7 @@ public class WellnessTracker {
     public static void main(String[] args) {
 
         // -----------------------------------------------------------------
-        // Version 1.0.0
+        // Version 1.0.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
         // Last github commit 11/1/26 (msg sa group chat before
         // you make changes para ma save namin file for backups.)
         // -----------------------------------------------------------------
