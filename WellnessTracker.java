@@ -5,11 +5,11 @@ public class WellnessTracker {
 
     public static void main(String[] args) {
 
-        // -------------------------------------------------------------------
+        // ------------------------------------------------------------------
         // Version 1.0.0
         // Last github commit 11/1/26 (msg sa group chat before
         // you make changes para ma save namin file for backups.)
-        // -------------------------------------------------------------------
+        // ------------------------------------------------------------------
 
         // static String name;
         // static String studentID;
