@@ -11,7 +11,7 @@
 
 # Suggestions
 
-[1.1.0] 11/17/26 Last commit: 11/17/26 7:45 PM
+[1.1.0] 11/17/26
 - Give Jymrel Money (Jymrel)
 - Put if else sa enterStudentInformation(); para may limit sa name and studentID. (Paul)
 - We will create multiple java files for the methods para organized. (Paul)
