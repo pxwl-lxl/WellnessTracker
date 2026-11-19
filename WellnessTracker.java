@@ -15,14 +15,14 @@ public class WellnessTracker {
     static String studentID;
 
     // Initial daily wellness records
-    // static double sleep = 0;
-    // static int exercise = 0;
-    // static double water = 0;
+    static double sleep = 0;
+    static int exercise = 0;
+    static double water = 0;
 
-    // Initial wellness goals
-    // static double sleepGoal = 8;
-    // static int exerciseGoal = 60;
-    // static double waterGoal = 2;
+    // Initial wellness goals (I-research ang recommended)
+    static double sleepGoal = 8;
+    static int exerciseGoal = 60;
+    static double waterGoal = 2;
 
     public static void main(String[] args) {
 
@@ -34,36 +34,35 @@ public class WellnessTracker {
         int choice;
 
         do {
-            mainMenu();
-
+            mainMenu(); // Jymrel
             System.out.print("Enter your choice: ");
             choice = userInput.nextInt();
 
             switch (choice) {
 
                 case 1:
-                    manageDailyRecords(); // Jymrel
+                    ManagaDailyRecords.manageDailyRecords(); // Jymrel
                     break;
                 case 2:
-                    viewWellnessReport(); // Lourence
+                    ViewWellnessReports.viewWellnessReports(); // Lourence
                     break;
                 case 3:
-                    // manageGoals(); // wala pa
+                    ManageGoals.manageGoals(); // Paul
                     break;
                 case 4:
-                    // viewAchievements(); // wala pa
+                    ViewAchievements.viewAchievements(); // Paul
                     break;
                 case 5:
-                    // studentProfile(); // wala pa
+                    StudentProfile.studentProfile(); // Paul
                     break;
                 case 6:
-                    // wellnessGuide(); // wala pa
+                    WellnessGuide.wellnessGuide(); // Jymrel
                     break;
                 case 7:
-                    // resetAllData(); // wala pa
+                    ResetAllData.resetAllData(); // Paul
                     break;
                 case 0:
-                    // exit(); // wala pa
+                    // exit(); // wala pa. ma create ako UI for this - paul
                     System.out.println("\nThank you for our Wellness Tracker!");
                     break;
 
@@ -77,19 +76,25 @@ public class WellnessTracker {
 
     }
 
-    // Reusable border line - Paul 11/1/26
-    public static void line() {
-        System.out.println("+---------------------------------------------------+");
+    // Reusable border line
+    static void line() {
+        System.out.println("+----------------------------------------------------+");
+    }
+
+    // Reusable enter your choice
+    static int enterChoice() {
+        System.out.print("Enter your choice: ");
+        return WellnessTracker.userInput.nextInt();
     }
 
     public static void displayWelcomeHeader() {
         line();
-        System.out.println("|                 Wellness Tracker                  |");
-        System.out.println("|         Java Final Project by Group 3:            |");
+        System.out.println("|                  Wellness Tracker                  |");
+        System.out.println("|          Java Final Project by Group 3:            |");
         line();
     }
 
-    public static void enterStudentInformation() {
+    static void enterStudentInformation() {
         System.out.print("Enter your name: ");
         name = userInput.nextLine();
 
@@ -104,76 +109,36 @@ public class WellnessTracker {
         String formattedDate = today.format(formatter);
 
         line();
-        System.out.println("|             STUDENT WELLNESS TRACKER              |");
-        System.out.println("|            Your Health, Your Progress             |");
+        System.out.println("|              STUDENT WELLNESS TRACKER              |");
+        System.out.println("|             Your Health, Your Progress             |");
         line();
-        System.out.println("| Student: " + name + "               Date: " + formattedDate + "  |");
-        System.out.println("| Student ID: " + studentID + "                     |");
+        System.out.printf("| Student: %-22.20s Date: %-12s |%n", name, formattedDate);
+        System.out.printf("| Student ID: %-38.9s |%n", studentID);
         line();
-        System.out.println("|                  TODAY'S STATS                    |");
-        System.out.println("|                                                   |");
-        System.out.println("| +----------------------+  +----------------------+|");
-        System.out.println("| |     WELLNESS SCORE           SLEEP DURATION    ||");
-        System.out.println("| |        +                            +          ||");
-        System.out.println("| +----------------------+  +----------------------+|");
-        System.out.println("|                                                   |");
-        System.out.println("| +----------------------+  +----------------------+|");
-        System.out.println("| |     EXERCISE TIME             WATER INTAKE     ||");
-        System.out.println("| |            +                         +         ||");
-        System.out.println("| +----------------------+  +----------------------+|");
+        System.out.println("|                  TODAY'S STATS                     |");
+        System.out.println("|                                                    |");
+        System.out.println("| +----------------------+  +----------------------+ |");
+        System.out.println("| |     WELLNESS SCORE           SLEEP DURATION    | |");
+        System.out.println("| |        +                            +          | |");
+        System.out.println("| +----------------------+  +----------------------+ |");
+        System.out.println("|                                                    |");
+        System.out.println("| +----------------------+  +----------------------+ |");
+        System.out.println("| |     EXERCISE TIME             WATER INTAKE     | |");
+        System.out.println("| |            +                         +         | |");
+        System.out.println("| +----------------------+  +----------------------+ |");
         line();
-        System.out.println("|                    MAIN MENU                      |");
+        System.out.println("|                    MAIN MENU                       |");
         line();
-        System.out.println("|   [1] Manage Daily Records                        |");
-        System.out.println("|   [2] View Wellness Reports                       |");
-        System.out.println("|   [3] Manage Goals                                |");
-        System.out.println("|   [4] View Achievements                           |");
-        System.out.println("|   [5] Student Profile                             |");
-        System.out.println("|   [6] Wellness Guide                              |");
-        System.out.println("|   [7] Reset All Data                              |");
-        System.out.println("|   [0] Exit                                        |");
+        System.out.println("| [1] Manage Daily Records                           |");
+        System.out.println("| [2] View Wellness Reports                          |");
+        System.out.println("| [3] Manage Goals                                   |");
+        System.out.println("| [4] View Achievements                              |");
+        System.out.println("| [5] Student Profile                                |");
+        System.out.println("| [6] Wellness Guide                                 |");
+        System.out.println("| [7] Reset All Data                                 |");
+        System.out.println("| [0] Exit                                           |");
         line();
 
     }
 
-    static void manageDailyRecords() {
-        line();
-        System.out.println("|               MANAGE DAILY RECORDS                |");
-        line();
-        System.out.println("| Sleep: + hours                                    |");
-        System.out.println("| Exercise: + minutes                               |");
-        System.out.println("| Water intake: + liters                            |");
-        line();
-        System.out.println("| Wellness score: +                                 |");
-        System.out.println("| Disclamer: Score is a habit-tracking indicator,   |");
-        System.out.println("| not a medical assessment.                         |");
-        line();
-        System.out.println("| [0] Back to Main Menu                             |");
-        line();
-
-        System.out.print("Enter your choice: ");
-        int choice = userInput.nextInt();
-    }
-
-    static void viewWellnessReport() {
-        line();
-        System.out.println("|                 WELLNESS REPORT                  |");
-        line();
-        System.out.println("|                 DAILY SUMMARY                    |");
-        line();
-        System.out.println("|  Sleep: + hours                                  |");
-        System.out.println("|  Exercise: + minutes                             |");
-        System.out.println("|  Water Intake: + liters                          |");
-        line();
-        System.out.println("| Wellness Score: +/100                            |");
-        System.out.println("| Disclaimer: Score is a habit-tracking indicator, |");
-        System.out.println("| not a medical assesment.");
-        line();
-        System.out.println("| [0] Back to Main Menu                            |");
-        line();
-
-        System.out.print("Enter your choice: ");
-        int choice = userInput.nextInt();
-
-    }
 }
