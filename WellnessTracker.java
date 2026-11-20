@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/20/26 12:38 PM
+// Last commit: 11/20/26 5:23 PM
 // -----------------------------------------------------------------
 
 import java.util.Scanner;
@@ -13,6 +13,8 @@ public class WellnessTracker {
 
     static String name;
     static String studentID;
+
+    static int choice;
 
     // Initial daily wellness records
     static double sleep = 0;
@@ -30,8 +32,6 @@ public class WellnessTracker {
         enterStudentInformation();
 
         System.out.print("\nWelcome, " + name + "!\n\n");
-
-        int choice;
 
         do {
             mainMenu(); // Jymrel
@@ -95,11 +95,26 @@ public class WellnessTracker {
     }
 
     static void enterStudentInformation() {
-        System.out.print("Enter your name: ");
-        name = userInput.nextLine();
+        while (true) {
+            System.out.print("Enter your name (max 20 characters): ");
+            name = userInput.nextLine().trim();
 
-        System.out.print("Enter your Student ID: ");
-        studentID = userInput.nextLine();
+            if (!name.isEmpty() && name.length() <= 20) {
+                break;
+            }
+            System.out.println("Invalid name! Must be 1 to 20 characters.\n");
+        }
+
+        while (true) {
+            System.out.print("Enter your Student ID (max 9 characters): ");
+            studentID = userInput.nextLine().trim();
+
+            if (!studentID.isEmpty() && studentID.length() <= 9) {
+                break;
+
+            }
+            System.out.println("Invalid Student ID! Must be 1 to 9 characters.\n");
+        }
 
     }
 
@@ -119,12 +134,12 @@ public class WellnessTracker {
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("| |     WELLNESS SCORE           SLEEP DURATION    | |");
-        System.out.println("| |        +                            +          | |");
+        System.out.printf("| |                            %4.1f / %4.1f Hours   | |%n", sleep, sleepGoal);
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("| |     EXERCISE TIME             WATER INTAKE     | |");
-        System.out.println("| |            +                         +         | |");
+        System.out.printf("| |                            %4.1f / %4.1f Liters  | |%n", water, waterGoal);
         System.out.println("| +----------------------+  +----------------------+ |");
         line();
         System.out.println("|                    MAIN MENU                       |");
