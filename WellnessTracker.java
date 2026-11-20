@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/20/26 5:23 PM
+// Last commit: 11/20/26 7:26 PM
 // -----------------------------------------------------------------
 
 import java.util.Scanner;
@@ -134,7 +134,8 @@ public class WellnessTracker {
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("| |     WELLNESS SCORE           SLEEP DURATION    | |");
-        System.out.printf("| |                            %4.1f / %4.1f Hours   | |%n", sleep, sleepGoal);
+        System.out.printf("| |       %3d / 100  %4.1f / %4.1f Hours   | |%n", CalculateScore.calculateScore(), sleep,
+                sleepGoal);
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");

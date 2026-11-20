@@ -9,11 +9,11 @@ public class ManageGoals {
             WellnessTracker.line();
             System.out.println("|                   MANAGE GOALS                     |");
             WellnessTracker.line();
-            System.out.printf("| Sleep goal: %.1f hour/s                             |%n",
+            System.out.printf("| Sleep goal:          %.1f hour/s                    |%n",
                     WellnessTracker.sleepGoal);
-            System.out.printf("| Exercise goal: %d minute/s                         |%n",
+            System.out.printf("| Exercise goal:       %d minute/s                   |%n",
                     WellnessTracker.exerciseGoal);
-            System.out.printf("| Water intake goal: %.1f liter/s                     |%n",
+            System.out.printf("| Water intake goal:   %.1f liter/s                   |%n",
                     WellnessTracker.waterGoal);
             WellnessTracker.line();
             System.out.println("| [1] Update Sleep Goal                              |");
@@ -55,10 +55,10 @@ public class ManageGoals {
         WellnessTracker.sleepGoal = choice;
 
         System.out.println("\nSleep goal updated!");
-
+        return WellnessTracker.sleepGoal;
     }
 
-    static void updateExerciseGoal() {
+    static int updateExerciseGoal() {
         System.out.print("Enter exercise goal (0-1440 minutes): ");
         int choice = WellnessTracker.userInput.nextInt();
 
@@ -71,10 +71,10 @@ public class ManageGoals {
         WellnessTracker.exerciseGoal = choice;
 
         System.out.println("\nSleep goal updated!");
-
+        return WellnessTracker.exerciseGoal;
     }
 
-    static void updateWaterGoal() {
+    static double updateWaterGoal() {
         System.out.print("Enter water goal in litters (0.0-20): ");
         double choice = WellnessTracker.userInput.nextDouble();
 
@@ -87,7 +87,7 @@ public class ManageGoals {
         WellnessTracker.waterGoal = choice;
 
         System.out.println("\nWater goal updated!");
-
+        return WellnessTracker.waterGoal;
     }
 
 }

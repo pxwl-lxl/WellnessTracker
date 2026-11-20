@@ -9,11 +9,14 @@ public class ViewWellnessReports {
                 WellnessTracker.line();
                 System.out.println("|                   DAILY SUMMARY                    |");
                 WellnessTracker.line();
-                System.out.printf("| Sleep: %.1f / %.1f hours                             |%n", WellnessTracker.sleep,
+                System.out.printf("| Sleep:         %.1f / %.1f hour/s                    |%n",
+                                WellnessTracker.sleep,
                                 WellnessTracker.sleepGoal);
-                System.out.printf("| Exercise: %d / %d minutes                           |%n", WellnessTracker.exercise,
+                System.out.printf("| Exercise:      %d / %d minute/s                     |%n",
+                                WellnessTracker.exercise,
                                 WellnessTracker.exerciseGoal);
-                System.out.printf("| Water intake: %.1f / %.1f liters                     |%n", WellnessTracker.water,
+                System.out.printf("| Water intake:  %.1f / %.1f liter/s                   |%n",
+                                WellnessTracker.water,
                                 WellnessTracker.waterGoal);
                 WellnessTracker.line();
                 System.out.println("| Wellness Score: +/100                              |");

@@ -82,12 +82,12 @@ public class ManageDailyRecords {
     static void updateWater() {
 
         System.out.print("Enter water intake in liters (0-100): ");
-        int choice = WellnessTracker.userInput.nextInt();
+        double choice = WellnessTracker.userInput.nextDouble();
 
         while (choice < 0 || choice > 100) {
 
             System.out.print("Invalid input! Enter a value from 0 to 100: ");
-            choice = WellnessTracker.userInput.nextInt();
+            choice = WellnessTracker.userInput.nextDouble();
 
         }
 
