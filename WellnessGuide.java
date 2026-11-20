@@ -136,8 +136,6 @@ public class WellnessGuide {
             System.out.println("| - Adjust goals when your needs change.                    ");
             System.out.println("| - Celebrate your achievements.                            ");
             WellnessTracker.line();
-            System.out.println("| Your data is saved in wellness_data.txt.                  ");
-            System.out.println("| It loads automatically the next time you run the program. ");
             System.out.println("| [0] Back                                                  ");
             WellnessTracker.line();
             choice = WellnessTracker.enterChoice();
