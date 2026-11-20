@@ -41,7 +41,7 @@ public class WellnessTracker {
             switch (choice) {
 
                 case 1:
-                    ManagaDailyRecords.manageDailyRecords(); // Jymrel
+                    ManageDailyRecords.manageDailyRecords(); // Jymrel
                     break;
                 case 2:
                     ViewWellnessReports.viewWellnessReports(); // Lourence
@@ -96,13 +96,13 @@ public class WellnessTracker {
 
     static void enterStudentInformation() {
         while (true) {
-            System.out.print("Enter your name (max 20 characters): ");
+            System.out.print("Enter your name (max 30 characters): ");
             name = userInput.nextLine().trim();
 
-            if (!name.isEmpty() && name.length() <= 20) {
+            if (!name.isEmpty() && name.length() <= 30) {
                 break;
             }
-            System.out.println("Invalid name! Must be 1 to 20 characters.\n");
+            System.out.println("Invalid name! Must be 1 to 30 characters.\n");
         }
 
         while (true) {

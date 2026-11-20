@@ -1,5 +1,5 @@
 
-public class ManagaDailyRecords {
+public class ManageDailyRecords {
 
     static void manageDailyRecords() {
 
@@ -10,9 +10,10 @@ public class ManagaDailyRecords {
             WellnessTracker.line();
             System.out.println("|                MANAGE DAILY RECORDS                |");
             WellnessTracker.line();
-            System.out.printf("| Sleep: %4.1f hours                                  |%n", WellnessTracker.sleep);
-            System.out.printf("| Exercise: %4d minutes                             |%n", WellnessTracker.exercise);
-            System.out.printf("| Water intake: %4.1f liters   |%n", WellnessTracker.water);
+            System.out.printf("| Sleep:        %4.1f hour/s                          |%n",
+                    WellnessTracker.sleep);
+            System.out.printf("| Exercise:   %4d minute/s                          |%n", WellnessTracker.exercise);
+            System.out.printf("| Water intake: %4.1f liter/s                         |%n", WellnessTracker.water);
             WellnessTracker.line();
             System.out.println("| [1] Update Sleep Duration                          |");
             System.out.println("| [2] Update Exercise Time                           |");
@@ -85,7 +86,7 @@ public class ManagaDailyRecords {
 
         while (choice < 0 || choice > 100) {
 
-            System.out.print("Invalid input! Enter a value from 0 to 1440: ");
+            System.out.print("Invalid input! Enter a value from 0 to 100: ");
             choice = WellnessTracker.userInput.nextInt();
 
         }

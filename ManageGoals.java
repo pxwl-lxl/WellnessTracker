@@ -9,11 +9,11 @@ public class ManageGoals {
             WellnessTracker.line();
             System.out.println("|                   MANAGE GOALS                     |");
             WellnessTracker.line();
-            System.out.printf("| Sleep goal: %.1f hours                              |%n",
+            System.out.printf("| Sleep goal: %.1f hour/s                             |%n",
                     WellnessTracker.sleepGoal);
-            System.out.printf("| Exercise goal: %d minutes                          |%n",
+            System.out.printf("| Exercise goal: %d minute/s                         |%n",
                     WellnessTracker.exerciseGoal);
-            System.out.printf("| Water intake goal: %.1f liters                      |%n",
+            System.out.printf("| Water intake goal: %.1f liter/s                     |%n",
                     WellnessTracker.waterGoal);
             WellnessTracker.line();
             System.out.println("| [1] Update Sleep Goal                              |");
@@ -42,19 +42,52 @@ public class ManageGoals {
         } while (choice != 0);
     }
 
-    static void updateSleepGoal() {
-        System.out.print("Enter sleep goal (0.5-24 hours): ");
+    static double updateSleepGoal() {
+        System.out.print("Enter sleep goal (0.0-24 hours): ");
         double choice = WellnessTracker.userInput.nextDouble();
+
+        while (choice < 0 || choice > 24) {
+
+            System.out.print("Invalid input! Enter a value from 0.0 to 24: ");
+            choice = WellnessTracker.userInput.nextDouble();
+        }
+
+        WellnessTracker.sleepGoal = choice;
+
+        System.out.println("\nSleep goal updated!");
+
     }
 
     static void updateExerciseGoal() {
-        System.out.print("Enter exercise goal (1-1440 minutes): ");
-        double choice = WellnessTracker.userInput.nextDouble();
+        System.out.print("Enter exercise goal (0-1440 minutes): ");
+        int choice = WellnessTracker.userInput.nextInt();
+
+        while (choice < 0 || choice > 1440) {
+
+            System.out.print("Invalid input! Enter a value from 0 to 1440: ");
+            choice = WellnessTracker.userInput.nextInt();
+        }
+
+        WellnessTracker.exerciseGoal = choice;
+
+        System.out.println("\nSleep goal updated!");
+
     }
 
     static void updateWaterGoal() {
-        System.out.print("Enter water goal in litters (0.1-20): ");
+        System.out.print("Enter water goal in litters (0.0-20): ");
         double choice = WellnessTracker.userInput.nextDouble();
+
+        while (choice < 0 || choice > 20) {
+
+            System.out.print("Invalid input! Enter a value from 0.0 to 20: ");
+            choice = WellnessTracker.userInput.nextDouble();
+        }
+
+        WellnessTracker.waterGoal = choice;
+
+        System.out.println("\nWater goal updated!");
+
     }
 
 }
