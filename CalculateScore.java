@@ -16,7 +16,7 @@ public class CalculateScore {
 
         double exerciseRatio = 0.0;
         if (WellnessTracker.exerciseGoal > 0) {
-            exerciseRatio = WellnessTracker.exercise / WellnessTracker.exerciseGoal;
+            exerciseRatio = (double) WellnessTracker.exercise / WellnessTracker.exerciseGoal;
 
             if (exerciseRatio < 0) {
                 exerciseRatio = 0.0;

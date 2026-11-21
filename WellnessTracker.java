@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/20/26 7:26 PM
+// Last commit: 11/21/26 2:50 PM
 // -----------------------------------------------------------------
 
 import java.util.Scanner;
@@ -17,9 +17,9 @@ public class WellnessTracker {
     static int choice;
 
     // Initial daily wellness records
-    static double sleep = 0;
+    static double sleep = 0.0;
     static int exercise = 0;
-    static double water = 0;
+    static double water = 0.0;
 
     // Initial wellness goals (I-research ang recommended)
     static double sleepGoal = 8;
@@ -133,14 +133,17 @@ public class WellnessTracker {
         System.out.println("|                  TODAY'S STATS                     |");
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");
-        System.out.println("| |     WELLNESS SCORE           SLEEP DURATION    | |");
-        System.out.printf("| |       %3d / 100  %4.1f / %4.1f Hours   | |%n", CalculateScore.calculateScore(), sleep,
+        System.out.println("| |    WELLNESS SCORE    |  |    SLEEP DURATION    | |");
+        System.out.printf("| |     %3d / 100        |  |  %4.1f /%4.1f Hours    | |%n",
+                CalculateScore.calculateScore(),
+                sleep,
                 sleepGoal);
         System.out.println("| +----------------------+  +----------------------+ |");
         System.out.println("|                                                    |");
         System.out.println("| +----------------------+  +----------------------+ |");
-        System.out.println("| |     EXERCISE TIME             WATER INTAKE     | |");
-        System.out.printf("| |                            %4.1f / %4.1f Liters  | |%n", water, waterGoal);
+        System.out.println("| |    EXERCISE TIME     |  |     WATER INTAKE     | |");
+        System.out.printf("| |  %3d /%3d Minutes    |  | %5.1f /%4.1f Liters   | |%n", exercise, exerciseGoal,
+                water, waterGoal);
         System.out.println("| +----------------------+  +----------------------+ |");
         line();
         System.out.println("|                    MAIN MENU                       |");
