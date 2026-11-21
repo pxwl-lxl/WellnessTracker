@@ -81,19 +81,22 @@ public class WellnessGuide {
             System.out.println("| 1. SLEEP                                                      ");
             System.out.println("| Teenagers generally need 8-10 hours of sleep.                 ");
             System.out.println("| Adults generally need at least 7 hours.                       ");
-            System.out.println("| Your current goal: ++    //8.0 hours                          ");
+            System.out.printf("| Your current goal:  %4.1f Hours                    %n",
+                    WellnessTracker.sleepGoal);
             WellnessTracker.line();
-            System.out.println("| 2. HYDRATION                                                  ");
-            System.out.println("| Water needs vary with age, activity, climate,                 ");
-            System.out.println("| diet, and individual health needs.                            ");
-            System.out.println("| Set a suitable personal water goal.                           ");
-            System.out.println("| Your current goal: ++     //2.0 liters                        ");
-            WellnessTracker.line();
-            System.out.println("| 3. EXERCISE                                                   ");
+            System.out.println("| 2. EXERCISE                                                   ");
             System.out.println("| School-age children and teens generally need                  ");
             System.out.println("| about 60 minutes of daily physical activity.                  ");
             System.out.println("| Adults should aim for regularly weekly activity.              ");
-            System.out.println("| Your current goal: ++     //60 minutes                        ");
+            System.out.printf("| Your current goal: %4d Minutes                   %n",
+                    WellnessTracker.exerciseGoal);
+            WellnessTracker.line();
+            System.out.println("| 3. HYDRATION                                                  ");
+            System.out.println("| Water needs vary with age, activity, climate,                 ");
+            System.out.println("| diet, and individual health needs.                            ");
+            System.out.println("| Set a suitable personal water goal.                           ");
+            System.out.printf("| Your current goal: %5.1f Liters                   %n",
+                    WellnessTracker.waterGoal);
             WellnessTracker.line();
             System.out.println("| These are general educational guidelines.                     ");
             System.out.println("| Individual needs may differ.                                  ");
@@ -125,9 +128,13 @@ public class WellnessGuide {
             System.out.println("| 6. Check Achievements to celebrate progress.              ");
             WellnessTracker.line();
             System.out.println("| CURRENT GOALS                                             ");
-            System.out.println("| Sleep: ++ //8.0 hours                                     ");
-            System.out.println("| Exercise: ++ //60 minutes                                 ");
-            System.out.println("| Water: ++ //2.0 liters                                    ");
+            System.out.printf("| Sleep goal:          %4.1f Hours                    |%n",
+                    WellnessTracker.sleepGoal);
+            System.out.printf("| Exercise goal:      %4d Minutes                   |%n",
+                    WellnessTracker.exerciseGoal);
+            System.out.printf("| Water intake goal:  %5.1f Liters                   |%n",
+                    WellnessTracker.waterGoal);
+            WellnessTracker.line();
             WellnessTracker.line();
             System.out.println("| TIPS FOR PROGRESS                                         ");
             System.out.println("| - Start with achievable changes.                          ");

@@ -10,10 +10,13 @@ public class ManageDailyRecords {
             WellnessTracker.line();
             System.out.println("|                MANAGE DAILY RECORDS                |");
             WellnessTracker.line();
-            System.out.printf("| Sleep:        %4.1f hour/s                          |%n",
-                    WellnessTracker.sleep);
-            System.out.printf("| Exercise:   %4d minute/s                          |%n", WellnessTracker.exercise);
-            System.out.printf("| Water intake: %4.1f liter/s                         |%n", WellnessTracker.water);
+            System.out.printf("| Sleep:        %4.1f / %4.1f Hours                    |%n",
+                    WellnessTracker.sleep,
+                    WellnessTracker.sleepGoal);
+            System.out.printf("| Exercise:   %4d / %4d Minutes                    |%n",
+                    WellnessTracker.exercise, WellnessTracker.exerciseGoal);
+            System.out.printf("| Water intake: %5.1f /%5.1f Liters                  |%n",
+                    WellnessTracker.water, WellnessTracker.waterGoal);
             WellnessTracker.line();
             System.out.println("| [1] Update Sleep Duration                          |");
             System.out.println("| [2] Update Exercise Time                           |");

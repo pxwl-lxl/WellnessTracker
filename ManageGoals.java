@@ -9,11 +9,11 @@ public class ManageGoals {
             WellnessTracker.line();
             System.out.println("|                   MANAGE GOALS                     |");
             WellnessTracker.line();
-            System.out.printf("| Sleep goal:          %.1f hour/s                    |%n",
+            System.out.printf("| Sleep goal:          %4.1f Hours                    |%n",
                     WellnessTracker.sleepGoal);
-            System.out.printf("| Exercise goal:       %d minute/s                   |%n",
+            System.out.printf("| Exercise goal:      %4d Minutes                   |%n",
                     WellnessTracker.exerciseGoal);
-            System.out.printf("| Water intake goal:   %.1f liter/s                   |%n",
+            System.out.printf("| Water intake goal:  %5.1f Liters                   |%n",
                     WellnessTracker.waterGoal);
             WellnessTracker.line();
             System.out.println("| [1] Update Sleep Goal                              |");
