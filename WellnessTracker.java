@@ -89,7 +89,7 @@ public class WellnessTracker {
                 return choice;
             }
 
-            System.out.println("Invalid choice! Please try again.\n");
+            System.out.print("Invalid choice! Please select a number from the menu.\n");
         }
     }
 
@@ -106,7 +106,7 @@ public class WellnessTracker {
     // Reading a double, para ma detect ang errors
     static double readDouble() {
         while (!userInput.hasNextDouble()) {
-            System.out.print("Invalid input! Enter a valid number: ");
+            System.out.print("Invalid choice! Please select a number from the menu.\n");
             userInput.nextLine();
         }
         double choice = userInput.nextInt();
