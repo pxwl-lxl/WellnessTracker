@@ -4,14 +4,7 @@
 - Initial commit.
 
 [1.1.0] 11/17/26
-- Added switch statement (Paul)
-- Added mainMenu (Jymrel)
-- Added manageDailyRecords (Jymrel)
-- Added viewWellnessReport (Lourence)
-- Added viewAchievements (Paul)
-- Added studentProfile (Paul)
-- Added wellnessGuide (Jymrel)
-- Added resetAllData (Paul)
+- This was before we changed the UI.
 
 # Suggestions
 
