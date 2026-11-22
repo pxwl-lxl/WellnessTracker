@@ -44,12 +44,10 @@ public class ManageGoals {
 
     static double updateSleepGoal() {
         System.out.print("Enter sleep goal (0.0-24 hours): ");
-        double choice = WellnessTracker.userInput.nextDouble();
-
+        double choice = WellnessTracker.readDouble();
         while (choice < 0 || choice > 24) {
-
             System.out.print("Invalid input! Enter a value from 0.0 to 24: ");
-            choice = WellnessTracker.userInput.nextDouble();
+            choice = WellnessTracker.readDouble();
         }
 
         WellnessTracker.sleepGoal = choice;
@@ -60,12 +58,12 @@ public class ManageGoals {
 
     static int updateExerciseGoal() {
         System.out.print("Enter exercise goal (0-1440 minutes): ");
-        int choice = WellnessTracker.userInput.nextInt();
+        int choice = WellnessTracker.readInt();
 
         while (choice < 0 || choice > 1440) {
 
             System.out.print("Invalid input! Enter a value from 0 to 1440: ");
-            choice = WellnessTracker.userInput.nextInt();
+            choice = WellnessTracker.readInt();
         }
 
         WellnessTracker.exerciseGoal = choice;
@@ -76,12 +74,12 @@ public class ManageGoals {
 
     static double updateWaterGoal() {
         System.out.print("Enter water goal in litters (0.0-20): ");
-        double choice = WellnessTracker.userInput.nextDouble();
+        double choice = WellnessTracker.readDouble();
 
         while (choice < 0 || choice > 20) {
 
             System.out.print("Invalid input! Enter a value from 0.0 to 20: ");
-            choice = WellnessTracker.userInput.nextDouble();
+            choice = WellnessTracker.readDouble();
         }
 
         WellnessTracker.waterGoal = choice;

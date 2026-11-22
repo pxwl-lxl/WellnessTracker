@@ -5,19 +5,73 @@ public class ViewAchievements {
         WellnessTracker.line();
         System.out.println("|                 MAIN ACHIEVEMENTS                  |");
         WellnessTracker.line();
-        System.out.println("| [X] Welcome Aboard                                 |");
+        System.out.printf("| %-50s |%n", mainAchievementsSleep());
+        System.out.printf("| %-50s |%n", mainAchievementsExercise());
+        System.out.printf("| %-50s |%n", mainAchievementsWater());
         WellnessTracker.line();
         System.out.println("|              DAILY GOAL ACHIEVEMENTS               |");
         WellnessTracker.line();
-        System.out.println("| [X] Sleep Goal Completed                           |");
-        System.out.println("| [X] Exercise Goal Completed                        |");
-        System.out.println("| [X] Water Goal Completed                           |");
+        System.out.printf("| %-50s |%n", achievementSleep());
+        System.out.printf("| %-50s |%n", achievementExercise());
+        System.out.printf("| %-50s |%n", achievementWater());
         WellnessTracker.line();
         System.out.println("| [0] Back to Main Menu                              |");
         WellnessTracker.line();
 
         WellnessTracker.enterChoice();
-
     }
 
+    static String achievementSleep() {
+
+        if (WellnessTracker.sleep >= WellnessTracker.sleepGoal) {
+            return "[V] Sleep Goal Completed";
+        } else {
+            return "[X] Sleep Goal Not Completed";
+        }
+    }
+
+    static String achievementExercise() {
+
+        if (WellnessTracker.exercise >= WellnessTracker.exerciseGoal) {
+            return "[V] Exercise Goal Completed";
+        } else {
+            return "[X] Execise Goal Not Completed";
+        }
+    }
+
+    static String achievementWater() {
+
+        if (WellnessTracker.water >= WellnessTracker.waterGoal) {
+            return "[V] Water Goal Completed";
+        } else {
+            return "[X] Water Goal Not Completed";
+        }
+    }
+
+    static String mainAchievementsSleep() {
+
+        if (WellnessTracker.sleep > WellnessTracker.sleepGoal) {
+            return "[V] Achieved: No Phantoms Tonight";
+        } else {
+            return "[X] Surpass your daily sleep goal to unlock.";
+        }
+    }
+
+    static String mainAchievementsExercise() {
+
+        if (WellnessTracker.exercise > WellnessTracker.exerciseGoal) {
+            return "[V] Achieved: Overkill";
+        } else {
+            return "[X] Surpass your daily exercise goal to unlock.";
+        }
+    }
+
+    static String mainAchievementsWater() {
+
+        if (WellnessTracker.water > WellnessTracker.waterGoal) {
+            return "[V] Achieved: Potion of Water Breathing";
+        } else {
+            return "[X] Surpass your daily water goal to unlock.";
+        }
+    }
 }

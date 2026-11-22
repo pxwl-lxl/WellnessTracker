@@ -53,12 +53,12 @@ public class ManageDailyRecords {
     static void updateSleep() {
 
         System.out.print("Enter sleep duration (0-24): ");
-        double choice = WellnessTracker.userInput.nextDouble();
+        double choice = WellnessTracker.readDouble();
 
         while (choice < 0 || choice > 24) {
 
             System.out.print("Invalid input! Enter a value from 0 to 24: ");
-            choice = WellnessTracker.userInput.nextDouble();
+            choice = WellnessTracker.readDouble();
         }
 
         WellnessTracker.sleep = choice;
@@ -69,7 +69,7 @@ public class ManageDailyRecords {
     static void updateExercise() {
 
         System.out.print("Enter exercise time (0-1440): ");
-        int choice = WellnessTracker.userInput.nextInt();
+        int choice = WellnessTracker.readInt();
 
         while (choice < 0 || choice > 1440) {
 
@@ -85,12 +85,12 @@ public class ManageDailyRecords {
     static void updateWater() {
 
         System.out.print("Enter water intake in liters (0-100): ");
-        double choice = WellnessTracker.userInput.nextDouble();
+        double choice = WellnessTracker.readDouble();
 
         while (choice < 0 || choice > 100) {
 
             System.out.print("Invalid input! Enter a value from 0 to 100: ");
-            choice = WellnessTracker.userInput.nextDouble();
+            choice = WellnessTracker.readDouble();
 
         }
 

@@ -1,8 +1,8 @@
+
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/21/26 7:12 PM
+// Last commit: 11/22/26 4:00 PM
 // -----------------------------------------------------------------
-
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -35,8 +35,7 @@ public class WellnessTracker {
 
         do {
             mainMenu(); // Jymrel
-            System.out.print("Enter your choice: ");
-            choice = userInput.nextInt();
+            choice = enterChoice();
 
             switch (choice) {
 
@@ -84,9 +83,30 @@ public class WellnessTracker {
     // Reusable enter your choice
     static int enterChoice() {
         System.out.print("Enter your choice: ");
-        return WellnessTracker.userInput.nextInt();
+        return readInt();
     }
 
+    // Reading an integer, para ma detect ang errors
+    static int readInt() {
+        while (!userInput.hasNextInt()) {
+            System.out.print("Invalid input! Enter a valid number: ");
+            userInput.nextLine();
+        }
+        int choice = userInput.nextInt();
+        return choice;
+    }
+
+    // Reading a double, para ma detect ang errors
+    static double readDouble() {
+        while (!userInput.hasNextDouble()) {
+            System.out.print("Invalid input! Enter a valid number: ");
+            userInput.nextLine();
+        }
+        double choice = userInput.nextInt();
+        return choice;
+    }
+
+    // Main menu
     public static void displayWelcomeHeader() {
         line();
         System.out.println("|                  Wellness Tracker                  |");
@@ -97,23 +117,45 @@ public class WellnessTracker {
     static void enterStudentInformation() {
         while (true) {
             System.out.print("Enter your name (max 30 characters): ");
-            name = userInput.nextLine().trim();
+            name = userInput.nextLine().trim().toUpperCase();
 
             if (!name.isEmpty() && name.length() <= 30) {
-                break;
+
+                boolean valid = true;
+
+                for (int i = 0; i < name.length(); i++) {
+                    if (!Character.isLetter(name.charAt(i)) && name.charAt(i) != ' ') {
+                        valid = false;
+                        break;
+
+                    }
+                }
+
+                if (valid) {
+                    break;
+                }
             }
-            System.out.println("Invalid name! Must be 1 to 30 characters.\n");
+            System.out.println("Invalid name! Use only letters, with a maximum of 30 characters.\n");
         }
 
         while (true) {
             System.out.print("Enter your Student ID (max 9 characters): ");
-            studentID = userInput.nextLine().trim();
+            studentID = userInput.nextLine().trim().toUpperCase();
 
-            if (!studentID.isEmpty() && studentID.length() <= 9) {
-                break;
+            boolean valid = !studentID.isEmpty() && studentID.length() <= 9;
 
+            for (int i = 0; i < studentID.length(); i++) {
+                if (!Character.isLetterOrDigit(studentID.charAt(i))) {
+                    valid = false;
+                    break;
+                }
             }
-            System.out.println("Invalid Student ID! Must be 1 to 9 characters.\n");
+
+            if (valid) {
+                break;
+            }
+
+            System.out.println("Invalid Student ID! Use only letters and numbers, with a maximum of 9 characters.\n");
         }
 
     }

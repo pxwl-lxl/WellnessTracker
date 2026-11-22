@@ -36,26 +36,54 @@ public class StudentProfile {
     }
 
     static void changeName() {
-        System.out.print("Enter new name (max 20 characters): ");
-        String newName = WellnessTracker.userInput.nextLine().trim();
+        while (true) {
+            System.out.print("Enter your name (max 30 characters): ");
+            String newName = WellnessTracker.userInput.nextLine().trim().toUpperCase();
 
-        if (newName.isEmpty() || newName.length() > 20) {
-            System.out.println("\nInvalid name! Must be 1 to 20 characters.");
-        } else {
-            WellnessTracker.name = newName;
-            System.out.println("\nName updated successfully!");
+            if (!newName.isEmpty() && newName.length() <= 30) {
+
+                boolean valid = true;
+
+                for (int i = 0; i < newName.length(); i++) {
+                    if (!Character.isLetter(newName.charAt(i)) && newName.charAt(i) != ' ') {
+                        valid = false;
+                        break;
+
+                    }
+                }
+
+                if (valid) {
+                    WellnessTracker.studentID = newName;
+                    System.out.println("\nName updated successfully!");
+                    break;
+                }
+            }
+            System.out.println("Invalid name! Use only letters, with a maximum of 30 characters.\n");
         }
     }
 
     static void changeStudentID() {
-        System.out.print("Enter new Student ID (max 9 characters): ");
-        String newID = WellnessTracker.userInput.nextLine().trim();
+        while (true) {
+            System.out.print("Enter your Student ID (max 9 characters): ");
+            String newStudentID = WellnessTracker.userInput.nextLine().trim().toUpperCase();
 
-        if (newID.isEmpty() || newID.length() > 9) {
-            System.out.println("\nInvalid Student ID! Must be 1 to 9 characters.");
-        } else {
-            WellnessTracker.studentID = newID;
-            System.out.println("\nStudent ID updated successfully!");
+            boolean valid = !newStudentID.isEmpty() && newStudentID.length() <= 9;
+
+            for (int i = 0; i < newStudentID.length(); i++) {
+                if (!Character.isLetterOrDigit(newStudentID.charAt(i))) {
+                    valid = false;
+                    break;
+                }
+            }
+
+            if (valid) {
+                WellnessTracker.studentID = newStudentID;
+                System.out.println("\nStudent ID updated successfully!");
+                break;
+            }
+
+            System.out.println("Invalid Student ID! Use only letters and numbers, with a maximum of 9 characters.\n");
         }
+
     }
 }
