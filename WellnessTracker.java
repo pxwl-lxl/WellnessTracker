@@ -1,7 +1,7 @@
 
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/22/26 4:00 PM
+// Last commit: 11/22/26 4:20 PM
 // -----------------------------------------------------------------
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -30,8 +30,6 @@ public class WellnessTracker {
 
         displayWelcomeHeader();
         enterStudentInformation();
-
-        System.out.print("\nWelcome, " + name + "!\n\n");
 
         do {
             mainMenu(); // Jymrel
@@ -67,6 +65,7 @@ public class WellnessTracker {
 
                 default:
                     System.out.println("\nInvalid choice!");
+                    break;
             }
 
         } while (choice != 0);
@@ -82,8 +81,16 @@ public class WellnessTracker {
 
     // Reusable enter your choice
     static int enterChoice() {
-        System.out.print("Enter your choice: ");
-        return readInt();
+        while (true) {
+            System.out.print("Enter your choice: ");
+            int choice = readInt();
+
+            if (choice >= 0 && choice <= 7) {
+                return choice;
+            }
+
+            System.out.println("Invalid choice! Please try again.\n");
+        }
     }
 
     // Reading an integer, para ma detect ang errors
