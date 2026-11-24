@@ -56,6 +56,7 @@ public class ManageGoals {
         }
 
         WellnessTracker.sleepGoal = choice;
+        writer.Update();
 
         System.out.println("\nSleep goal updated!");
         return WellnessTracker.sleepGoal;
@@ -72,8 +73,9 @@ public class ManageGoals {
         }
 
         WellnessTracker.exerciseGoal = choice;
+        writer.Update();
 
-        System.out.println("\nSleep goal updated!");
+        System.out.println("\nExercise goal updated!");
         return WellnessTracker.exerciseGoal;
     }
 
@@ -88,6 +90,7 @@ public class ManageGoals {
         }
 
         WellnessTracker.waterGoal = choice;
+        writer.Update();
 
         System.out.println("\nWater goal updated!");
         return WellnessTracker.waterGoal;

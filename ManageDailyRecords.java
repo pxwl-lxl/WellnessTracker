@@ -66,6 +66,7 @@ public class ManageDailyRecords {
         }
 
         WellnessTracker.sleep = choice;
+        writer.Update();
 
         System.out.println("\nSleep record updated!");
     }
@@ -82,6 +83,7 @@ public class ManageDailyRecords {
         }
 
         WellnessTracker.exercise = choice;
+        writer.Update();
 
         System.out.println("\nExercise record updated!");
     }
@@ -99,6 +101,7 @@ public class ManageDailyRecords {
         }
 
         WellnessTracker.water = choice;
+        writer.Update();
 
         System.out.println("\nWater record updated");
     }

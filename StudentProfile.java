@@ -58,6 +58,7 @@ public class StudentProfile {
 
                 if (valid) {
                     WellnessTracker.name = newName;
+                    writer.Update();
                     System.out.println("\nName updated successfully!");
                     break;
                 }

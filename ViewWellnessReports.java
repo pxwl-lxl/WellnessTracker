@@ -4,7 +4,6 @@ public class ViewWellnessReports {
 
                 int choice;
 
-
                 WellnessTracker.clearScreen();
                 WellnessTracker.longLine();
                 WellnessTracker.longUpperLine();
