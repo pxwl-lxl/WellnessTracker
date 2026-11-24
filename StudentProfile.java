@@ -5,16 +5,16 @@ public class StudentProfile {
         int choice;
 
         do {
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.println("|                   STUDENT PROFILE                  |");
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.printf("| Name: %-44.20s |%n", WellnessTracker.name);
             System.out.printf("| Student ID: %-38.9s |%n", WellnessTracker.studentID);
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.println("| [1] Change Name                                    |");
             System.out.println("| [2] Change Student ID                              |");
             System.out.println("| [0] Back to Main Menu                              |");
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
 
             choice = WellnessTracker.enterChoice();
             WellnessTracker.userInput.nextLine();

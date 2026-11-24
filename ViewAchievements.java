@@ -2,21 +2,21 @@ public class ViewAchievements {
 
     static void viewAchievements() {
 
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
         System.out.println("|                 MAIN ACHIEVEMENTS                  |");
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
         System.out.printf("| %-50s |%n", mainAchievementsSleep());
         System.out.printf("| %-50s |%n", mainAchievementsExercise());
         System.out.printf("| %-50s |%n", mainAchievementsWater());
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
         System.out.println("|              DAILY GOAL ACHIEVEMENTS               |");
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
         System.out.printf("| %-50s |%n", achievementSleep());
         System.out.printf("| %-50s |%n", achievementExercise());
         System.out.printf("| %-50s |%n", achievementWater());
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
         System.out.println("| [0] Back to Main Menu                              |");
-        WellnessTracker.line();
+        WellnessTracker.upperLine();
 
         WellnessTracker.enterChoice();
     }

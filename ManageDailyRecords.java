@@ -7,9 +7,9 @@ public class ManageDailyRecords {
 
         do {
 
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.println("|                MANAGE DAILY RECORDS                |");
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.printf("| Sleep:        %4.1f / %4.1f Hours                    |%n",
                     WellnessTracker.sleep,
                     WellnessTracker.sleepGoal);
@@ -17,12 +17,12 @@ public class ManageDailyRecords {
                     WellnessTracker.exercise, WellnessTracker.exerciseGoal);
             System.out.printf("| Water intake: %5.1f /%5.1f Liters                  |%n",
                     WellnessTracker.water, WellnessTracker.waterGoal);
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.println("| [1] Update Sleep Duration                          |");
             System.out.println("| [2] Update Exercise Time                           |");
             System.out.println("| [3] Update Water Intake                            |");
             System.out.println("| [0] Back to Main Menu                              |");
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
 
             choice = WellnessTracker.enterChoice();
 

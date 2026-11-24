@@ -6,21 +6,18 @@ public class ManageGoals {
 
         do {
 
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
             System.out.println("|                   MANAGE GOALS                     |");
-            WellnessTracker.line();
-            System.out.printf("| Sleep goal:          %4.1f Hours                    |%n",
-                    WellnessTracker.sleepGoal);
-            System.out.printf("| Exercise goal:      %4d Minutes                   |%n",
-                    WellnessTracker.exerciseGoal);
-            System.out.printf("| Water intake goal:  %5.1f Liters                   |%n",
-                    WellnessTracker.waterGoal);
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
+            System.out.printf("| Sleep goal:          %4.1f Hours                    |%n", WellnessTracker.sleepGoal);
+            System.out.printf("| Exercise goal:      %4d Minutes                   |%n", WellnessTracker.exerciseGoal);
+            System.out.printf("| Water intake goal:  %5.1f Liters                   |%n", WellnessTracker.waterGoal);
+            WellnessTracker.upperLine();
             System.out.println("| [1] Update Sleep Goal                              |");
             System.out.println("| [2] Update Exercise Goal                           |");
             System.out.println("| [3] Update Water Goal                              |");
             System.out.println("| [0] Back to Main Menu                              |");
-            WellnessTracker.line();
+            WellnessTracker.upperLine();
 
             choice = WellnessTracker.enterChoice();
 
