@@ -1,7 +1,7 @@
 
 // -----------------------------------------------------------------
 // Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/24/26 7:35 PM
+// Last commit: 11/22/26 10:13 PM
 // -----------------------------------------------------------------
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -229,21 +229,21 @@ public class WellnessTracker {
 
         longLine();
         longUpperLine();
-        System.out.println(CYAN + "║                                             STUDENT WELLNESS TRACKER                                              ║" + RESET);
-        System.out.println(CYAN + "║                                            Your Health, Your Progress                                             ║" + RESET);
+        System.out.println(CYAN + "║                                            STUDENT WELLNESS TRACKER                                               ║" + RESET);
+        System.out.println(CYAN + "║                                           Your Health, Your Progress                                              ║" + RESET);
         longMiddleLine();
         System.out.printf(CYAN + "║ Student: %-22.20s                                                                Date: %-12s ║%n" + RESET, name, formattedDate);
         System.out.printf(CYAN + "║ Student ID: %-38.9s                                                                ║%n" + RESET, studentID);
         longMiddleLine();
-        System.out.println(CYAN + "║                                                  TODAY'S STATS                                                    ║" + RESET);
+        System.out.println(CYAN + "║                                                 TODAY'S STATS                                                     ║" + RESET);
         System.out.println(CYAN + "║                                                                                                                   ║" + RESET);
         System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║    " + RESET);
         System.out.println(CYAN + "║ ║    WELLNESS SCORE    ║  ║    SLEEP DURATION    ║                                                                ║    " + RESET);
         System.out.printf(CYAN + "║ ║     %3d / 100        ║  ║  %4.1f / %4.1f Hours   ║                                                                ║   %n" + RESET, CalculateScore.calculateScore(), sleep, sleepGoal);
-        System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║" + RESET);
-        System.out.println(CYAN + "║                                                                                                                   ║" + RESET);
-        System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║" + RESET);
-        System.out.println(CYAN + "║ ║    EXERCISE TIME     ║  ║     WATER INTAKE     ║                                                                ║" + RESET);
+        System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║");
+        System.out.println(CYAN + "║                                                                                                                   ║");
+        System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║");
+        System.out.println(CYAN + "║ ║    EXERCISE TIME     ║  ║     WATER INTAKE     ║                                                                ║");
         System.out.printf(CYAN + "║ ║ %4d /%4d Minutes   ║  ║ %5.1f /%5.1f Liters  ║                                                                ║%n" + RESET, exercise, exerciseGoal, water, waterGoal);
         System.out.println(CYAN + "║ +----------------------+  +----------------------+                                                                ║" + RESET);
         System.out.println(CYAN + "║                                                                                                                   ║" + RESET);
@@ -255,7 +255,7 @@ public class WellnessTracker {
         System.out.println(CYAN + "║                                                                                                                   ║" + RESET);
         System.out.println(CYAN + "║                                                                                                                   ║" + RESET);
         longMiddleLine();
-        System.out.println(CYAN + "║                                                     MAIN MENU                                                     ║" + RESET);
+        System.out.println(CYAN + "║                                                   MAIN MENU                                                       ║" + RESET);
         longMiddleLine();
         System.out.println(CYAN + "║ [1] Manage Daily Records                                                                                          ║" + RESET);
         System.out.println(CYAN + "║ [2] View Wellness Reports                                                                                         ║" + RESET);

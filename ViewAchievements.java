@@ -2,21 +2,23 @@ public class ViewAchievements {
 
     static void viewAchievements() {
 
-        WellnessTracker.upperLine();
-        System.out.println("|                 MAIN ACHIEVEMENTS                  |");
-        WellnessTracker.upperLine();
-        System.out.printf("| %-50s |%n", mainAchievementsSleep());
-        System.out.printf("| %-50s |%n", mainAchievementsExercise());
-        System.out.printf("| %-50s |%n", mainAchievementsWater());
-        WellnessTracker.upperLine();
-        System.out.println("|              DAILY GOAL ACHIEVEMENTS               |");
-        WellnessTracker.upperLine();
-        System.out.printf("| %-50s |%n", achievementSleep());
-        System.out.printf("| %-50s |%n", achievementExercise());
-        System.out.printf("| %-50s |%n", achievementWater());
-        WellnessTracker.upperLine();
-        System.out.println("| [0] Back to Main Menu                              |");
-        WellnessTracker.upperLine();
+        WellnessTracker.longLine();
+        WellnessTracker.longUpperLine();
+        System.out.println(WellnessTracker.CYAN + "║                                               MAIN ACHIEVEMENTS                                                   ║" + WellnessTracker.RESET);
+        WellnessTracker.longMiddleLine();
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, mainAchievementsSleep());
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, mainAchievementsExercise());
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                WellnessTracker.CYAN + %n" + WellnessTracker.RESET, mainAchievementsWater());
+        WellnessTracker.longMiddleLine();
+        System.out.println("║              DAILY GOAL ACHIEVEMENTS                                                                              ║");
+        WellnessTracker.longMiddleLine();
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, achievementSleep());
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, achievementExercise());
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, achievementWater());
+        WellnessTracker.longMiddleLine();
+        System.out.println(WellnessTracker.CYAN + "║ [0] Back to Main Menu                                                                                             ║" + WellnessTracker.RESET);
+        WellnessTracker.longLowerLine();
+        WellnessTracker.longLine();
 
         WellnessTracker.enterChoice();
     }

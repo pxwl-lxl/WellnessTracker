@@ -6,18 +6,26 @@ public class ManageGoals {
 
         do {
 
-            WellnessTracker.upperLine();
-            System.out.println("|                   MANAGE GOALS                     |");
-            WellnessTracker.upperLine();
-            System.out.printf("| Sleep goal:          %4.1f Hours                    |%n", WellnessTracker.sleepGoal);
-            System.out.printf("| Exercise goal:      %4d Minutes                   |%n", WellnessTracker.exerciseGoal);
-            System.out.printf("| Water intake goal:  %5.1f Liters                   |%n", WellnessTracker.waterGoal);
-            WellnessTracker.upperLine();
-            System.out.println("| [1] Update Sleep Goal                              |");
-            System.out.println("| [2] Update Exercise Goal                           |");
-            System.out.println("| [3] Update Water Goal                              |");
-            System.out.println("| [0] Back to Main Menu                              |");
-            WellnessTracker.upperLine();
+            WellnessTracker.longLine();
+            WellnessTracker.longUpperLine();
+            System.out.println(WellnessTracker.CYAN + "║                                                 MANAGE GOALS                                                      ║" + WellnessTracker.RESET);
+            WellnessTracker.longMiddleLine();
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            System.out.printf(WellnessTracker.CYAN + "║ Sleep goal:          %4.1f Hours                                                                                   ║%n", WellnessTracker.sleepGoal);
+            System.out.printf(WellnessTracker.CYAN + "║ Exercise goal:      %4d Minutes                                                                                  ║%n" + WellnessTracker.RESET, WellnessTracker.exerciseGoal);
+            System.out.printf(WellnessTracker.CYAN + "║ Water intake goal:  %5.1f Liters                                                                                  ║%n" + WellnessTracker.RESET, WellnessTracker.waterGoal);
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║                                                                                                                   ║" + WellnessTracker.RESET);
+            WellnessTracker.longMiddleLine();
+            System.out.println(WellnessTracker.CYAN + "║ [1] Update Sleep Goal                                                                                             ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║ [2] Update Exercise Goal                                                                                          ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║ [3] Update Water Goal                                                                                             ║" + WellnessTracker.RESET);
+            System.out.println(WellnessTracker.CYAN + "║ [0] Back to Main Menu                                                                                             ║" + WellnessTracker.RESET);
+            WellnessTracker.longLowerLine();
+            WellnessTracker.longLine();
 
             choice = WellnessTracker.enterChoice();
 
