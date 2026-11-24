@@ -4,13 +4,13 @@ public class ViewAchievements {
 
         WellnessTracker.longLine();
         WellnessTracker.longUpperLine();
-        System.out.println(WellnessTracker.CYAN + "║                                               MAIN ACHIEVEMENTS                                                   ║" + WellnessTracker.RESET);
+        System.out.println(WellnessTracker.CYAN + "║                                               MAIN ACHIEVEMENTS                                                   ║" + WellnessTracker.CYAN);
         WellnessTracker.longMiddleLine();
         System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, mainAchievementsSleep());
         System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, mainAchievementsExercise());
-        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                WellnessTracker.CYAN + %n" + WellnessTracker.RESET, mainAchievementsWater());
+        System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, mainAchievementsWater());
         WellnessTracker.longMiddleLine();
-        System.out.println("║              DAILY GOAL ACHIEVEMENTS                                                                              ║");
+        System.out.println(WellnessTracker.CYAN + "║                                            DAILY GOAL ACHIEVEMENTS                                                ║" + WellnessTracker.RESET);
         WellnessTracker.longMiddleLine();
         System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, achievementSleep());
         System.out.printf(WellnessTracker.CYAN + "║ %-50s                                                                ║%n" + WellnessTracker.RESET, achievementExercise());
