@@ -6,7 +6,7 @@ public class ManageDailyRecords {
         int choice;
 
         do {
-
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                              MANAGE DAILY RECORDS                                                 ║" + WellnessTracker.RESET);

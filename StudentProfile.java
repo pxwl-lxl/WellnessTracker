@@ -5,16 +5,20 @@ public class StudentProfile {
         int choice;
 
         do {
-            WellnessTracker.upperLine();
-            System.out.println("|                   STUDENT PROFILE                  |");
-            WellnessTracker.upperLine();
-            System.out.printf("| Name: %-44.20s |%n", WellnessTracker.name);
-            System.out.printf("| Student ID: %-38.9s |%n", WellnessTracker.studentID);
-            WellnessTracker.upperLine();
-            System.out.println("| [1] Change Name                                    |");
-            System.out.println("| [2] Change Student ID                              |");
-            System.out.println("| [0] Back to Main Menu                              |");
-            WellnessTracker.upperLine();
+            WellnessTracker.clearScreen();
+            WellnessTracker.longLine();
+            WellnessTracker.longUpperLine();
+            System.out.println(WellnessTracker.CYAN + "║                                                  STUDENT PROFILE                                                  ║");
+            WellnessTracker.longMiddleLine();
+            System.out.printf(WellnessTracker.CYAN + "║ Name: %-44.20s                                                                ║%n", WellnessTracker.name);
+            System.out.printf(WellnessTracker.CYAN + "║ Student ID: %-38.9s                                                                ║%n", WellnessTracker.studentID);
+            WellnessTracker.longMiddleLine();
+            System.out.println(WellnessTracker.CYAN + "║ [1] Change Name                                                                                                   ║");
+            System.out.println(WellnessTracker.CYAN + "║ [2] Change Student ID                                                                                             ║");
+            System.out.println(WellnessTracker.CYAN + "║ [0] Back to Main Menu                                                                                             ║");
+            WellnessTracker.longLowerLine();
+            WellnessTracker.longLine();
+
 
             choice = WellnessTracker.enterChoice();
             WellnessTracker.userInput.nextLine();
@@ -53,7 +57,7 @@ public class StudentProfile {
                 }
 
                 if (valid) {
-                    WellnessTracker.studentID = newName;
+                    WellnessTracker.name = newName;
                     System.out.println("\nName updated successfully!");
                     break;
                 }

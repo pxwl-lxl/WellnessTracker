@@ -5,6 +5,7 @@ public class WellnessGuide {
         int choice;
 
         do {
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                                   WELLNESS GUIDE                                                  ║");
@@ -43,6 +44,7 @@ public class WellnessGuide {
         int choice;
 
         do {
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                              WELLNESS SCORE CALCULATOR                                            ║");
@@ -79,6 +81,7 @@ public class WellnessGuide {
         int choice;
 
         do {
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                               RECOMMENDED DAILY HABITS                                            ║");
@@ -121,6 +124,7 @@ public class WellnessGuide {
         int choice;
 
         do {
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                               GOALS AND PROGRESS GUIDE                                            ║");

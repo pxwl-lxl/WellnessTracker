@@ -4,6 +4,8 @@ public class ViewWellnessReports {
 
                 int choice;
 
+
+                WellnessTracker.clearScreen();
                 WellnessTracker.longLine();
                 WellnessTracker.longUpperLine();
                 System.out.println(WellnessTracker.CYAN + "║                                                WELLNESS REPORT                                                    ║" + WellnessTracker.RESET);

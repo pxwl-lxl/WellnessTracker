@@ -1,10 +1,11 @@
 
 // -----------------------------------------------------------------
-// Current Version: 1.1.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
-// Last commit: 11/24/26 10:13 PM
+// Current Version: 1.3.0 (https://github.com/pxwl-lxl/WellnessTracker.git)
+// Last commit: 11/25/26 4:32 AM
 // -----------------------------------------------------------------
 import java.util.Scanner;
 import java.time.LocalDate;
+import java.io.File;
 import java.time.format.DateTimeFormatter;
 
 public class WellnessTracker {
@@ -40,12 +41,14 @@ public class WellnessTracker {
     // upperLine and lowerLine
     static String border;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         displayWelcomeHeader();
         enterStudentInformation();
 
         do {
+            clearScreen();
+            
             mainMenu(); // Jymrel
             choice = enterChoice();
 
@@ -87,6 +90,12 @@ public class WellnessTracker {
         userInput.close();
 
     }
+
+    public static void clearScreen() {
+            for (int i = 0; i < 30; i++) {
+                System.out.println();
+            }
+        }
 
     // Reusable border line
     static void longLine() { // Long white line
@@ -154,7 +163,7 @@ public class WellnessTracker {
             System.out.print("Invalid choice! Please select a number from the menu.\n");
             userInput.nextLine();
         }
-        double choice = userInput.nextInt();
+        double choice = userInput.nextDouble();
         return choice;
     }
 
@@ -219,6 +228,14 @@ public class WellnessTracker {
             }
 
             System.out.println("Invalid Student ID! Use only letters and numbers, with a maximum of 9 characters.\n");
+        }
+
+        // Check if the user file exists, if not mahimo bag-o nga file para sa user
+        File userFile = new File("Data/" + studentID.toUpperCase().trim() + ".txt");
+        if (userFile.exists()) {
+            writer.Read();
+        } else {
+            writer.Write();
         }
     }
 

@@ -2,6 +2,7 @@ public class ResetAllData {
 
     static void resetAllData() {
 
+        WellnessTracker.clearScreen();
         WellnessTracker.longLine();
         WellnessTracker.longUpperLine();
         System.out.println(WellnessTracker.CYAN + "║                                                  RESET ALL DATA                                                   ║");

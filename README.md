@@ -7,6 +7,9 @@
 - This was before we changed the UI.
 
 [1.2.0] 11/24/26
+- This was before naglagay ng file saving.
+
+[1.3.0] 11/25/26
 
 # Suggestions
 

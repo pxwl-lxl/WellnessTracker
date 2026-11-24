@@ -5,7 +5,7 @@ public class ManageGoals {
         int choice;
 
         do {
-
+            WellnessTracker.clearScreen();
             WellnessTracker.longLine();
             WellnessTracker.longUpperLine();
             System.out.println(WellnessTracker.CYAN + "║                                                 MANAGE GOALS                                                      ║" + WellnessTracker.RESET);

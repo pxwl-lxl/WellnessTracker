@@ -2,6 +2,7 @@ public class ViewAchievements {
 
     static void viewAchievements() {
 
+        WellnessTracker.clearScreen();
         WellnessTracker.longLine();
         WellnessTracker.longUpperLine();
         System.out.println(WellnessTracker.CYAN + "║                                               MAIN ACHIEVEMENTS                                                   ║" + WellnessTracker.CYAN);
